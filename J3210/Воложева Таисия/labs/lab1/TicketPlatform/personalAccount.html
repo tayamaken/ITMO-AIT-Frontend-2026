@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — Titickets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Titickets</a>
+            <div>
+                <span class="me-3">Иван П.</span>
+                <a href="login.html" class="btn btn-outline-primary">Выйти</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <h2 class="mb-4" style="color: var(--rose);">Мои билеты</h2>
+        
+        <div class="row g-3 mb-4">
+            <div class="col-12">
+                <h5>Активные <span class="badge bg-rose-subtle text-rose">3</span></h5>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="event-card p-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="badge" style="background: var(--rose-light);">Концерт</span>
+                        <small>16.03</small>
+                    </div>
+                    <h6 class="fw-bold mt-2">Жженый сахар</h6>
+                    <small class="text-muted d-block">Москва</small>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="fw-bold" style="color: var(--rose);">2 500 ₽</span>
+                        <button class="btn btn-sm btn-outline-rose" data-bs-toggle="modal" data-bs-target="#returnModal">Вернуть</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="event-card p-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="badge" style="background: var(--rose-light);">Театр</span>
+                        <small>23.03</small>
+                    </div>
+                    <h6 class="fw-bold mt-2">Чайка</h6>
+                    <small class="text-muted d-block">СПб</small>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="fw-bold" style="color: var(--rose);">3 200 ₽</span>
+                        <button class="btn btn-sm btn-outline-rose" data-bs-toggle="modal" data-bs-target="#returnModal">Вернуть</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="event-card p-3">
+                    <div class="d-flex justify-content-between">
+                        <span class="badge" style="background: var(--rose-light);">Выставка</span>
+                        <small>01.04</small>
+                    </div>
+                    <h6 class="fw-bold mt-2">Импрессионисты</h6>
+                    <small class="text-muted d-block">Москва</small>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <span class="fw-bold" style="color: var(--rose);">1 800 ₽</span>
+                        <button class="btn btn-sm btn-outline-rose" data-bs-toggle="modal" data-bs-target="#returnModal">Вернуть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="event-card p-3">
+            <h5 class="mb-3">Возвраты</h5>
+            <div class="d-flex justify-content-between mb-2">
+                <span>Рок-хиты</span>
+                <span class="badge bg-warning">В обработке</span>
+                <span>2 500 ₽</span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <span>Гамлет</span>
+                <span class="badge bg-success">Возвращено</span>
+                <span>3 800 ₽</span>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="returnModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="mb-3">Подтверждение возврата</h5>
+                <p class="small">Вернуть билет на сумму 2 500 ₽?</p>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-secondary w-50" data-bs-dismiss="modal">Нет</button>
+                    <button class="btn btn-sm btn-rose w-50" data-bs-dismiss="modal" onclick="alert('Возврат оформлен')">Да</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-3 mt-auto">
+        <small class="text-muted">© 2026 Titickets</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

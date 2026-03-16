@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Titickets</a>
+            <div>
+                <a href="login.html" class="btn btn-outline-primary me-2 px-4">Вход</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <div class="event-card p-4 p-xl-5">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-person-plus" style="font-size: 4rem; color: var(--rose);"></i>
+                        <h2 class="mt-3 fw-bold" style="color: var(--rose);">Создать аккаунт</h2>
+                        <p class="text-muted">Присоединяйтесь к Titickets</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="btn-group w-100" role="group" aria-label="Тип аккаунта">
+                            <input type="radio" class="btn-check" name="accountType" id="userType" autocomplete="off" checked>
+                            <label class="btn btn-outline-rose py-3" for="userType">
+                                <i class="bi bi-person me-2"></i>Посетитель
+                            </label>
+
+                            <input type="radio" class="btn-check" name="accountType" id="organizerType" autocomplete="off">
+                            <label class="btn btn-outline-rose py-3" for="organizerType">
+                                <i class="bi bi-mic me-2"></i>Организатор
+                            </label>
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-person me-2" style="color: var(--rose);"></i>Имя
+                            </label>
+                            <input type="text" class="form-control form-control-lg rounded-pill border-2"
+                                placeholder="Иван" style="border-color: rgba(232,62,140,0.2);" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-person me-2" style="color: var(--rose);"></i>Фамилия
+                            </label>
+                            <input type="text" class="form-control form-control-lg rounded-pill border-2"
+                                placeholder="Иванов" style="border-color: rgba(232,62,140,0.2);">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-envelope me-2" style="color: var(--rose);"></i>Электронная почта
+                            </label>
+                            <input type="email" class="form-control form-control-lg rounded-pill border-2"
+                                placeholder="example@mail.ru" style="border-color: rgba(232,62,140,0.2);" required>
+                        </div>
+                        
+                        <div id="organizerFields" style="display: none;">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="bi bi-building me-2" style="color: var(--rose);"></i>Название организации
+                                </label>
+                                <input type="text" class="form-control form-control-lg rounded-pill border-2"
+                                    placeholder="ООО «Ваша контора»" style="border-color: rgba(232,62,140,0.2);">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="bi bi-telephone me-2" style="color: var(--rose);"></i>Контактный телефон
+                                </label>
+                                <input type="tel" class="form-control form-control-lg rounded-pill border-2"
+                                    placeholder="+7 (999) 123-45-67" style="border-color: rgba(232,62,140,0.2);">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="bi bi-geo-alt me-2" style="color: var(--rose);"></i>Адрес организации
+                                </label>
+                                <input type="text" class="form-control form-control-lg rounded-pill border-2"
+                                    placeholder="Изумрудный город, дом 13" style="border-color: rgba(232,62,140,0.2);">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    <i class="bi bi-file-text me-2" style="color: var(--rose);"></i>ИНН / ОГРН
+                                </label>
+                                <input type="text" class="form-control form-control-lg rounded-pill border-2"
+                                    placeholder="1234567890" style="border-color: rgba(232,62,140,0.2);">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-lock me-2" style="color: var(--rose);"></i>Пароль
+                            </label>
+                            <input type="password" class="form-control form-control-lg rounded-pill border-2"
+                                placeholder="··········" style="border-color: rgba(232,62,140,0.2);" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-lock-fill me-2" style="color: var(--rose);"></i>Подтвердите пароль
+                            </label>
+                            <input type="password" class="form-control form-control-lg rounded-pill border-2"
+                                placeholder="··········" style="border-color: rgba(232,62,140,0.2);" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required
+                                    style="border-color: var(--rose);">
+                                <label class="form-check-label" for="terms">
+                                    Я принимаю
+                                    <a href="images/условия.jpg" target="_blank" class="text-decoration-none"
+                                        style="color: var(--rose);">
+                                        условия использования
+                                    </a>
+                                    и
+                                    <a href="images/конфиденциальность.jpg" target="_blank" class="text-decoration-none"
+                                        style="color: var(--rose);">
+                                        политику конфиденциальности
+                                    </a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-rose w-100 py-3 mb-3">
+                            <i class="bi bi-person-plus me-2"></i>Зарегистрироваться
+                        </button>
+                        <p class="text-center mb-0">
+                            Уже есть аккаунт?
+                            <a href="login.html" class="text-decoration-none fw-semibold" style="color: var(--rose);">
+                                Войти
+                            </a>
+                        </p>
+                    </form>
+
+                    <div class="divider my-4">или войдите, используя своего голубя</div>
+
+                    <div class="d-flex justify-content-center">
+                         <button class="btn btn-outline-rose rounded-circle pigeon-btn" title="Привязать голубя"> 🕊️ </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-4 mt-auto">
+        <p class="text-muted small mb-0">© 2026 Titickets. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

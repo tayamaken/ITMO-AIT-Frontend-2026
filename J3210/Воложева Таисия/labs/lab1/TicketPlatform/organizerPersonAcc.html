@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Организатор — Titickets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Titickets</a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="fw-semibold" style="color: var(--rose);">ООО «Контора»</span>
+                <a href="login.html" class="btn btn-outline-primary">Выйти</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 style="color: var(--rose);">Мои мероприятия</h5>
+            <button class="btn btn-sm btn-rose" data-bs-toggle="modal" data-bs-target="#createModal">+ Создать событие</button>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12">
+                <div class="event-card p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fw-bold mb-1">Жженый сахар</h6>
+                            <small class="text-muted">16.03.2026 · Москва</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold" style="color: var(--rose);">612 500 ₽</div>
+                            <small class="text-muted">заработок</small>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-2">
+                        <span>Продажи на текущий момент:</span>
+                        <span class="fw-bold">245 билетов</span>
+                    </div>
+                    
+                    <div class="progress mt-1" style="height: 4px;">
+                        <div class="progress-bar bg-rose" style="width: 82%"></div>
+                    </div>
+                    <small class="text-muted">245/300 продано</small>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <div class="event-card p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fw-bold mb-1">Чайка</h6>
+                            <small class="text-muted">23.03.2026 · СПб</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold" style="color: var(--rose);">569 600 ₽</div>
+                            <small class="text-muted">заработок</small>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-2">
+                        <span>Продажи на текущий момент:</span>
+                        <span class="fw-bold">178 билетов</span>
+                    </div>
+                    
+                    <div class="progress mt-1" style="height: 4px;">
+                        <div class="progress-bar bg-rose" style="width: 89%"></div>
+                    </div>
+                    <small class="text-muted">178/200 продано</small>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <div class="event-card p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fw-bold mb-1">Выставка импрессионистов</h6>
+                            <small class="text-muted">01.04.2026 · Москва</small>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold" style="color: var(--rose);">0 ₽</div>
+                            <small class="text-muted">заработок</small>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mt-2">
+                        <span>Продажи на текущий момент:</span>
+                        <span class="fw-bold">0 билетов</span>
+                    </div>
+                    
+                    <div class="progress mt-1" style="height: 4px;">
+                        <div class="progress-bar bg-rose" style="width: 0%"></div>
+                    </div>
+                    <small class="text-muted">0/150 продано</small>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="createModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h6 class="mb-3">Новое событие</h6>
+                <input type="text" class="form-control form-control-sm mb-2" placeholder="Название события">
+                <input type="text" class="form-control form-control-sm mb-2" placeholder="Место проведения">
+                <input type="date" class="form-control form-control-sm mb-2">
+                <input type="number" class="form-control form-control-sm mb-2" placeholder="Цена билета">
+                <input type="number" class="form-control form-control-sm mb-3" placeholder="Всего билетов">
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-secondary w-50" data-bs-dismiss="modal">Отмена</button>
+                    <button class="btn btn-sm btn-rose w-50" data-bs-dismiss="modal" onclick="alert('Событие создано')">Создать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-3 mt-auto">
+        <small class="text-muted">© 2026 Titickets · ООО «Контора»</small>
+    </footer>
+</body>
+</html>

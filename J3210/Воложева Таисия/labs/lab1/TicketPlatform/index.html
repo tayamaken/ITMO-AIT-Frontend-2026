@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Titickets</a>
+            <div>
+                <a href="login.html" class="btn btn-outline-primary me-2 px-4">Вход</a>
+                <a href="register.html" class="btn btn-primary px-4">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-rose">Найти мероприятие</h1>
+        </div>
+
+        <div class="search-form card p-4 mb-5">
+            <form class="row g-4">
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">
+                        <i class="bi bi-calendar3 me-2 text-rose"></i>Дата
+                    </label>
+                    <input type="date" class="form-control form-control-lg">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold"><i class="bi bi-tags me-2 text-rose"></i>Тип</label>
+                    <select class="form-select form-select-lg">
+                        <option selected>Все</option>
+                        <option>Концерт</option>
+                        <option>Театр</option>
+                        <option>Выставка</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold"><i class="bi bi-geo-alt me-2 text-rose"></i>Место</label>
+                    <input type="text" class="form-control form-control-lg" placeholder="Город или адрес">
+                </div>
+                <div class="col-12 text-center mt-3">
+                    <button type="submit" class="btn btn-rose btn-lg px-5 py-3">
+                        <i class="bi bi-search me-2"></i>Найти
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <h2 class="section-title text-center mb-4">Ближайшие события</h2>
+
+        <div class="row g-4" id="events-list">
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card h-100 d-flex flex-column">
+                    <div class="mb-3">
+                        <span class="badge bg-rose-subtle text-rose px-3 py-2 rounded-pill">Концерт</span>
+                    </div>
+                    <h4 class="card-title fw-bold mb-3">Концерт группы «Жженый сахар»</h4>
+                    <div class="event-info mb-3">
+                        <p><i class="bi bi-calendar-check-fill"></i> 16.03.2026</p>
+                        <p><i class="bi bi-pin-map-fill"></i> Москва, клуб «На чиле»</p>
+                    </div>
+                    <p class="text-muted small mb-4">Приходите и жгите вместе с нами!</p>
+                    <div class="mt-auto">
+                        <a href="event.html" class="btn btn-outline-rose w-100 py-2">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card h-100 d-flex flex-column">
+                    <div class="mb-3">
+                        <span class="badge bg-rose-subtle text-rose px-3 py-2 rounded-pill">Театр</span>
+                    </div>
+                    <h4 class="card-title fw-bold mb-3">Спектакль «Бюро забытых найденных вещей»</h4>
+                    <div class="event-info mb-3">
+                        <p><i class="bi bi-calendar-check-fill"></i> 16.03.2027</p>
+                        <p><i class="bi bi-pin-map-fill"></i> Екатеринбург, Театр драмы</p>
+                    </div>
+                    <p class="text-muted small mb-4">Лирическая комедия о потерянном и обретённом.</p>
+                    <div class="mt-auto">
+                        <a href="event.html" class="btn btn-outline-rose w-100 py-2">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="event-card h-100 d-flex flex-column">
+                    <div class="mb-3">
+                        <span class="badge bg-rose-subtle text-rose px-3 py-2 rounded-pill">Выставка</span>
+                    </div>
+                    <h4 class="card-title fw-bold mb-3">Выставка «Помоги мне»</h4>
+                    <div class="event-info mb-3">
+                        <p><i class="bi bi-calendar-check-fill"></i> 16.03.2025</p>
+                        <p><i class="bi bi-pin-map-fill"></i> Санкт-Петербург, Арт-пространство</p>
+                    </div>
+                    <p class="text-muted small mb-4">Современное искусство о человеческих отношениях.</p>
+                    <div class="mt-auto">
+                        <a href="event.html" class="btn btn-outline-rose w-100 py-2">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
