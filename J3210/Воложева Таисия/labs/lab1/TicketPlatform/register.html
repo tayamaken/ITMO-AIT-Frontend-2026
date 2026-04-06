@@ -7,115 +7,163 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css" />
-    <style>
-        .spinner-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 9999; }
-        .spinner-box { background: white; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
-    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <header class="navbar navbar-expand-lg">
+    <header class="navbar navbar-expand-lg border-bottom">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Titickets</a>
-            <div><a href="login.html" class="btn btn-outline-primary me-2 px-4">Вход</a></div>
+            <a class="navbar-brand fw-bold" href="index.html">Titickets</a>
         </div>
     </header>
 
-    <main class="container my-auto py-5">
+    <main class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6 col-xl-5">
-                <div class="event-card p-4 p-xl-5">
-                    <div class="text-center mb-4">
-                        <i class="bi bi-person-plus" style="font-size: 4rem; color: var(--rose);"></i>
-                        <h2 class="mt-3 fw-bold" style="color: var(--rose);">Создать аккаунт</h2>
-                        <p class="text-muted">Присоединяйтесь к Titickets</p>
-                    </div>
-
-                    <div id="errorMessage" class="alert alert-danger" style="display: none;"></div>
-
-                    <div class="mb-4">
-                        <div class="btn-group w-100" role="group">
-                            <input type="radio" class="btn-check" name="accountType" id="userType" autocomplete="off" checked>
-                            <label class="btn btn-outline-rose py-3" for="userType"><i class="bi bi-person me-2"></i>Посетитель</label>
-                            <input type="radio" class="btn-check" name="accountType" id="organizerType" autocomplete="off">
-                            <label class="btn btn-outline-rose py-3" for="organizerType"><i class="bi bi-mic me-2"></i>Организатор</label>
-                        </div>
-                    </div>
+            <div class="col-md-6 col-lg-5">
+                <div class="card border-0 shadow-sm rounded-4 p-4">
+                    <h1 class="h3 fw-bold mb-4 text-center">Регистрация</h1>
+                    
+                    <div id="errorMsg" class="alert alert-danger mb-3" style="display: none;" aria-live="polite"></div>
 
                     <form id="registerForm">
-                        <div class="mb-3"><label class="form-label fw-semibold"><i class="bi bi-person me-2" style="color: var(--rose);"></i>Имя *</label><input type="text" id="regName" class="form-control form-control-lg rounded-pill border-2" placeholder="Иван" required></div>
-                        <div class="mb-3"><label class="form-label fw-semibold"><i class="bi bi-person me-2" style="color: var(--rose);"></i>Фамилия</label><input type="text" id="regSurname" class="form-control form-control-lg rounded-pill border-2" placeholder="Иванов"></div>
-                        <div class="mb-3"><label class="form-label fw-semibold"><i class="bi bi-envelope me-2" style="color: var(--rose);"></i>Электронная почта *</label><input type="email" id="regEmail" class="form-control form-control-lg rounded-pill border-2" placeholder="example@mail.ru" required></div>
-                        <div class="mb-3"><label class="form-label fw-semibold"><i class="bi bi-pigeon me-2" style="color: var(--rose);"></i>ID голубя</label><input type="text" id="pigeonId" class="form-control form-control-lg rounded-pill border-2" placeholder="Например: PIGEON123"></div>
-                        <div id="organizerFields" style="display: none;">
-                            <div class="mb-3"><label class="form-label fw-semibold"><i class="bi bi-building me-2" style="color: var(--rose);"></i>Название организации</label><input type="text" id="orgName" class="form-control form-control-lg rounded-pill border-2" placeholder="ООО «Ваша контора»"></div>
-                            <div class="mb-3"><label class="form-label fw-semibold"><i class="bi bi-telephone me-2" style="color: var(--rose);"></i>Контактный телефон</label><input type="tel" id="orgPhone" class="form-control form-control-lg rounded-pill border-2" placeholder="+7 (999) 123-45-67"></div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Имя <span class="text-danger" aria-hidden="true">*</span></label>
+                            <input type="text" id="name" class="form-control rounded-3" autocomplete="given-name" required placeholder="Иван">
                         </div>
-                        <div class="mb-3"><label class="form-label fw-semibold"><i class="bi bi-lock me-2" style="color: var(--rose);"></i>Пароль *</label><input type="password" id="regPassword" class="form-control form-control-lg rounded-pill border-2" placeholder="минимум 6 символов" required></div>
-                        <div class="mb-4"><label class="form-label fw-semibold"><i class="bi bi-lock-fill me-2" style="color: var(--rose);"></i>Подтвердите пароль *</label><input type="password" id="regConfirmPassword" class="form-control form-control-lg rounded-pill border-2" placeholder="повторите пароль" required></div>
-                        <div class="mb-4"><div class="form-check"><input class="form-check-input" type="checkbox" id="terms" required><label class="form-check-label" for="terms">Я принимаю условия использования</label></div></div>
-                        <button type="submit" class="btn btn-rose w-100 py-3 mb-3" id="registerBtn"><i class="bi bi-person-plus me-2"></i>Зарегистрироваться</button>
-                        <p class="text-center mb-0">Уже есть аккаунт? <a href="login.html" class="text-decoration-none fw-semibold" style="color: var(--rose);">Войти</a></p>
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">Фамилия</label>
+                            <input type="text" id="surname" class="form-control rounded-3" autocomplete="family-name" placeholder="Иванов">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email <span class="text-danger" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" class="form-control rounded-3" autocomplete="email" required placeholder="example@mail.ru">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Пароль <span class="text-danger" aria-hidden="true">*</span></label>
+                            <input type="password" id="password" class="form-control rounded-3" autocomplete="new-password" required minlength="6" placeholder="Минимум 6 символов">
+                        </div>
+                        <div class="mb-4">
+                            <label for="pigeonId" class="form-label">ID голубя (опционально)</label>
+                            <input type="text" id="pigeonId" class="form-control rounded-3" placeholder="Для доставки бумажных билетов">
+                        </div>
+
+                        <div class="form-check form-switch mb-4">
+                            <input class="form-check-input" type="checkbox" role="switch" id="isOrganizer">
+                            <label class="form-check-label" for="isOrganizer">Я организатор мероприятий</label>
+                        </div>
+
+                        <fieldset id="organizerFields" style="display: none;" class="mb-4">
+                            <legend>Данные организации</legend>
+                            <div class="mb-3">
+                                <label for="orgName" class="form-label">Название организации</label>
+                                <input type="text" id="orgName" class="form-control rounded-3" placeholder="ООО 'Тикетс'">
+                            </div>
+                            <div class="mb-0">
+                                <label for="orgPhone" class="form-label">Контактный телефон</label>
+                                <input type="tel" id="orgPhone" class="form-control rounded-3" autocomplete="tel" placeholder="+7 (999) 000-00-00">
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" id="registerBtn" class="btn btn-rose w-100 rounded-pill py-2 fw-bold mb-3">Зарегистрироваться</button>
+                        <p class="text-center text-muted small">
+                            Уже есть аккаунт? <a href="login.html" class="text-rose fw-semibold text-decoration-none">Войти</a>
+                        </p>
                     </form>
                 </div>
             </div>
         </div>
     </main>
 
-    <div id="loadingOverlay" class="spinner-overlay" style="display: none;"><div class="spinner-box"><div class="spinner-border text-rose" style="width: 3rem; height: 3rem;" role="status"></div><p class="mt-3 mb-0">Создание аккаунта...</p></div></div>
-    <footer class="text-center py-4 mt-auto"><p class="text-muted small mb-0">© 2026 Titickets. Все права защищены.</p></footer>
+    <div id="loadingOverlay" class="spinner-overlay" style="display: none;" role="alert" aria-busy="true">
+        <div class="spinner-box">
+            <div class="spinner-border text-rose mb-3" role="status">
+                <span class="visually-hidden">Загрузка...</span>
+            </div>
+            <p class="mb-0 fw-semibold">Создаем аккаунт...</p>
+        </div>
+    </div>
 
+    <footer class="mt-auto py-4 border-top text-center text-muted small">
+        © 2026 Titickets. Все права защищены.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    document.querySelectorAll('input[name="accountType"]').forEach(radio => {
-        radio.addEventListener('change', (e) => { document.getElementById('organizerFields').style.display = e.target.id === 'organizerType' ? 'block' : 'none'; });
-    });
-    function showLoading(show) { document.getElementById('loadingOverlay').style.display = show ? 'flex' : 'none'; }
-    function validateEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
-    function validatePassword(pwd) { return pwd.length >= 6; }
-    function validatePigeonId(id) { return !id || /^[A-Za-z0-9_-]+$/.test(id); }
+        const isOrganizerCheckbox = document.getElementById('isOrganizer');
+        const organizerFields = document.getElementById('organizerFields');
+        const registerForm = document.getElementById('registerForm');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const errorDiv = document.getElementById('errorMsg');
+        const registerBtn = document.getElementById('registerBtn');
 
-    document.getElementById('registerForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const name = document.getElementById('regName').value.trim(), surname = document.getElementById('regSurname').value.trim();
-        const email = document.getElementById('regEmail').value.trim(), pigeonId = document.getElementById('pigeonId').value.trim();
-        const password = document.getElementById('regPassword').value, confirm = document.getElementById('regConfirmPassword').value;
-        const terms = document.getElementById('terms').checked, isOrganizer = document.getElementById('organizerType').checked;
-        const errorDiv = document.getElementById('errorMessage'), registerBtn = document.getElementById('registerBtn');
+        isOrganizerCheckbox.addEventListener('change', (e) => {
+            organizerFields.style.display = e.target.checked ? 'block' : 'none';
+        });
 
-        errorDiv.style.display = 'none';
-        if (!name || !email || !password) { errorDiv.textContent = 'Заполните обязательные поля'; errorDiv.style.display = 'block'; return; }
-        if (!validateEmail(email)) { errorDiv.textContent = 'Некорректный email'; errorDiv.style.display = 'block'; return; }
-        if (!validatePassword(password)) { errorDiv.textContent = 'Пароль должен быть не менее 6 символов'; errorDiv.style.display = 'block'; return; }
-        if (password !== confirm) { errorDiv.textContent = 'Пароли не совпадают'; errorDiv.style.display = 'block'; return; }
-        if (pigeonId && !validatePigeonId(pigeonId)) { errorDiv.textContent = 'Недопустимые символы в ID голубя'; errorDiv.style.display = 'block'; return; }
-        if (!terms) { errorDiv.textContent = 'Примите условия использования'; errorDiv.style.display = 'block'; return; }
-
-        showLoading(true); registerBtn.disabled = true;
-
-        try {
-            const usersRes = await fetch('http://localhost:3000/users');
-            if (!usersRes.ok) throw new Error('Ошибка загрузки пользователей');
-            const users = await usersRes.json();
-            if (users.some(u => u.email === email)) throw new Error('Пользователь с таким email уже существует');
-            
-            const userData = { name, surname: surname || '', email, password: password, role: isOrganizer ? 'organizer' : 'user', createdAt: new Date().toISOString() };
-            if (pigeonId) userData.pigeonId = pigeonId;
-            if (isOrganizer) { userData.organizationName = document.getElementById('orgName').value.trim() || ''; userData.phone = document.getElementById('orgPhone').value.trim() || ''; }
-
-            const createRes = await fetch('http://localhost:3000/users', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(userData) });
-            if (!createRes.ok) throw new Error('Ошибка сервера');
-            const createdUser = await createRes.json();
-
-            const { password: _, ...safeUser } = createdUser;
-            localStorage.setItem('accessToken', btoa(`${safeUser.email}:${Date.now()}`));
-            localStorage.setItem('user', JSON.stringify(safeUser));
-            
-            window.location.replace(safeUser.role === 'organizer' ? 'organizerAcc.html' : 'personalAcc.html');
-        } catch (err) {
-            errorDiv.textContent = err.message || 'Ошибка сервера';
-            errorDiv.style.display = 'block';
-            showLoading(false); registerBtn.disabled = false;
+        function showLoading(show) {
+            loadingOverlay.style.display = show ? 'flex' : 'none';
         }
-    });
+
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            errorDiv.style.display = 'none';
+            
+            const name = document.getElementById('name').value.trim();
+            const surname = document.getElementById('surname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const pigeonId = document.getElementById('pigeonId').value.trim();
+            const isOrganizer = isOrganizerCheckbox.checked;
+
+            showLoading(true);
+            registerBtn.disabled = true;
+
+            try {
+                const usersRes = await fetch('http://localhost:3000/users');
+                const users = await usersRes.json();
+                
+                if (users.some(u => u.email.toLowerCase() === email.toLowerCase())) {
+                    throw new Error('Пользователь с таким email уже существует');
+                }
+                
+                const userData = {
+                    name,
+                    surname: surname || '',
+                    email,
+                    password,
+                    role: isOrganizer ? 'organizer' : 'user',
+                    createdAt: new Date().toISOString()
+                };
+
+                if (pigeonId) userData.pigeonId = pigeonId;
+                
+                if (isOrganizer) {
+                    userData.organizationName = document.getElementById('orgName').value.trim() || '';
+                    userData.phone = document.getElementById('orgPhone').value.trim() || '';
+                }
+
+                const createRes = await fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(userData)
+                });
+
+                if (!createRes.ok) throw new Error('Ошибка сервера при регистрации');
+                
+                const createdUser = await createRes.json();
+
+                const { password: _, ...safeUser } = createdUser;
+                localStorage.setItem('accessToken', btoa(`${safeUser.email}:${Date.now()}`));
+                localStorage.setItem('user', JSON.stringify(safeUser));
+                
+                window.location.replace(safeUser.role === 'organizer' ? 'organizerAcc.html' : 'personalAcc.html');
+
+            } catch (err) {
+                errorDiv.textContent = err.message || 'Произошла ошибка. Попробуйте позже.';
+                errorDiv.style.display = 'block';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                showLoading(false);
+                registerBtn.disabled = false;
+            }
+        });
     </script>
 </body>
 </html>
