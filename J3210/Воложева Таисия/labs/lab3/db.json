@@ -1,16 +1,13 @@
 {
   "users": [
     {
-      "id": 1774865265346,
-      "email": "help@mail.ru",
-      "password": "123",
-      "name": "Организатор хаха",
+      "name": "Организатор хахаха",
       "surname": "Тестовый",
-      "role": "organizer",
-      "createdAt": "2026-03-30T10:07:45.346Z",
+      "email": "help@mail.ru",
       "pigeonId": "1",
       "organizationName": "ООО «Тест»",
-      "phone": "+7 (999) 123-45-67"
+      "phone": "+7 (999) 123-45-67",
+      "id": "1774865265346"
     },
     {
       "name": "Таисия",
@@ -20,7 +17,7 @@
       "role": "user",
       "createdAt": "2026-03-30T17:04:32.332Z",
       "pigeonId": "2",
-      "id": 1774865265347
+      "id": "1774865265347"
     },
     {
       "email": "sorry@mail.ru",
@@ -30,7 +27,7 @@
       "role": "user",
       "createdAt": "2026-03-30T19:26:10.983Z",
       "pigeonId": "sorry",
-      "id": 1774865265348
+      "id": "1774865265348"
     },
     {
       "email": "13@mail.ru",
@@ -40,7 +37,7 @@
       "role": "user",
       "createdAt": "2026-03-31T07:36:06.597Z",
       "pigeonId": "13",
-      "id": 1774865265349
+      "id": "1774865265349"
     },
     {
       "name": "Таисия",
@@ -50,7 +47,7 @@
       "role": "user",
       "createdAt": "2026-03-31T07:43:01.383Z",
       "pigeonId": "r",
-      "id": 1774865265350
+      "id": "1774865265350"
     },
     {
       "name": "Таисия",
@@ -60,19 +57,16 @@
       "role": "user",
       "createdAt": "2026-03-31T08:00:45.722Z",
       "pigeonId": "taya",
-      "id": 1774865265351
+      "id": "1774865265351"
     },
     {
       "name": "Таисия",
       "surname": "Андреевна",
       "email": "help2@mail.ru",
-      "password": "111111",
-      "role": "organizer",
-      "createdAt": "2026-03-31T08:01:21.756Z",
       "pigeonId": "111",
       "organizationName": "kontora",
       "phone": "+79258755066",
-      "id": 1774865265352
+      "id": "1774865265352"
     },
     {
       "name": "Таисия",
@@ -82,7 +76,7 @@
       "role": "user",
       "createdAt": "2026-03-31T08:07:24.229Z",
       "pigeonId": "11",
-      "id": 1774865265353
+      "id": "1774865265353"
     },
     {
       "name": "Таисия",
@@ -92,7 +86,7 @@
       "role": "user",
       "createdAt": "2026-03-31T08:08:06.965Z",
       "pigeonId": "q",
-      "id": 1774865265354
+      "id": "1774865265354"
     },
     {
       "name": "Таисия",
@@ -104,7 +98,7 @@
       "pigeonId": "s",
       "organizationName": "111111",
       "phone": "+79258755066",
-      "id": 1774865265355
+      "id": "1774865265355"
     },
     {
       "name": "Таисия",
@@ -114,7 +108,7 @@
       "role": "user",
       "createdAt": "2026-04-06T10:25:33.013Z",
       "pigeonId": "a",
-      "id": 1774865265356
+      "id": "1774865265356"
     }
   ],
   "events": [
@@ -129,11 +123,11 @@
       "posterUrl": "images/burntShugar.jpg",
       "hallSchemeUrl": "images/hall_layout.jpg",
       "organizerId": 1774865265346,
-      "soldTickets": 11,
-      "id": 1
+      "soldTickets": 5,
+      "id": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Спектакль «Бюро забытых найденных вещей»",
       "type": "Театр",
       "date": "2026-12-20",
@@ -141,50 +135,35 @@
       "description": "Лирическая комедия о потерянном и обретённом.",
       "price": 1800,
       "totalTickets": 150,
-      "soldTickets": 0,
+      "soldTickets": 3,
       "organizerId": 1774865265346,
       "posterUrl": "images/LostThings.jpg",
       "hallSchemeUrl": "images/hall_layout2.jpg"
     },
     {
-      "title": "hello",
-      "type": "Концерт",
-      "date": "2026-04-09",
-      "place": "Санкт-Петербург",
-      "price": 1200,
+      "title": "Мероприятие",
+      "date": "21.05.2026",
+      "price": 1000,
       "totalTickets": 20,
-      "soldTickets": 1,
+      "place": "Москва",
       "description": "",
-      "posterUrl": "images/default.jpg",
-      "hallSchemeUrl": "images/hall_layout.jpg",
-      "organizerId": 1774865265346,
-      "id": 3
+      "posterUrl": "",
+      "soldTickets": 4,
+      "organizerId": "1774865265352",
+      "id": "TDAWLoW5Xqs"
     },
     {
-      "title": "Событие 1",
-      "type": "Концерт",
-      "date": "2026-05-07",
-      "place": "Кострома",
-      "price": 12000,
-      "totalTickets": 12,
-      "soldTickets": 0,
-      "description": "",
-      "posterUrl": "images/default.jpg",
-      "hallSchemeUrl": "images/hall_layout.jpg",
-      "organizerId": 1774865265352,
-      "id": 4
-    },
-    {
-      "title": "New",
-      "date": "2026-04-02",
-      "price": 1200,
-      "place": "Казань",
-      "type": "Концерт",
-      "totalTickets": 300,
-      "description": "",
-      "organizerId": 1774865265346,
-      "soldTickets": 0,
-      "id": 5
+      "title": "Концерт Концертов",
+      "date": "2026-05-13",
+      "type": "Выставка",
+      "price": 5000,
+      "totalTickets": 10,
+      "place": "Москва",
+      "description": "Крутой концерт",
+      "posterUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnTQ04WdzI8_nx_D7_gGQK5nyjsunQOHNm5g&s",
+      "organizerId": "1774865265355",
+      "soldTickets": 2,
+      "id": "qyQsVMF0nek"
     }
   ],
   "tickets": [
@@ -197,7 +176,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "returned",
       "purchaseDate": "2026-03-30",
-      "id": 1,
+      "id": "1",
       "returnStatus": "pending",
       "returnDate": "2026-03-30"
     },
@@ -210,7 +189,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-03-30",
-      "id": 2
+      "id": "2"
     },
     {
       "userId": 1774865265348,
@@ -221,7 +200,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-03-30",
-      "id": 3
+      "id": "3"
     },
     {
       "userId": 1774865265350,
@@ -232,7 +211,7 @@
       "place": "Екатеринбург, Театр драмы",
       "status": "returned",
       "purchaseDate": "2026-03-31",
-      "id": 4,
+      "id": "4",
       "returnStatus": "pending",
       "returnDate": "2026-03-31"
     },
@@ -245,7 +224,7 @@
       "place": "Екатеринбург, Театр драмы",
       "status": "returned",
       "purchaseDate": "2026-03-31",
-      "id": 5,
+      "id": "5",
       "returnStatus": "pending",
       "returnDate": "2026-03-31"
     },
@@ -258,7 +237,7 @@
       "place": "Екатеринбург, Театр драмы",
       "status": "active",
       "purchaseDate": "2026-03-31",
-      "id": 6
+      "id": "6"
     },
     {
       "userId": 1774865265350,
@@ -269,7 +248,7 @@
       "place": "Екатеринбург, Театр драмы",
       "status": "active",
       "purchaseDate": "2026-03-31",
-      "id": 7
+      "id": "7"
     },
     {
       "userId": 1774865265347,
@@ -280,7 +259,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "returned",
       "purchaseDate": "2026-03-31",
-      "id": 8,
+      "id": "8",
       "returnStatus": "pending",
       "returnDate": "2026-03-31"
     },
@@ -293,7 +272,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "returned",
       "purchaseDate": "2026-03-31",
-      "id": 9,
+      "id": "9",
       "returnStatus": "pending",
       "returnDate": "2026-03-31"
     },
@@ -304,9 +283,11 @@
       "price": 2500,
       "date": "2026-12-16",
       "place": "Москва, клуб «На чиле»",
-      "status": "active",
+      "status": "returned",
       "purchaseDate": "2026-03-31",
-      "id": 10
+      "id": "10",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
     },
     {
       "userId": 1774865265347,
@@ -317,7 +298,7 @@
       "place": "Санкт-Петербург",
       "status": "active",
       "purchaseDate": "2026-03-31",
-      "id": 11
+      "id": "11"
     },
     {
       "userId": 1774865265354,
@@ -328,7 +309,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "returned",
       "purchaseDate": "2026-04-06",
-      "id": 12,
+      "id": "12",
       "returnStatus": "pending",
       "returnDate": "2026-04-06"
     },
@@ -341,7 +322,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 13
+      "id": "13"
     },
     {
       "userId": 1774865265354,
@@ -352,7 +333,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 14
+      "id": "14"
     },
     {
       "userId": 1774865265354,
@@ -363,7 +344,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 15
+      "id": "15"
     },
     {
       "userId": 1774865265354,
@@ -374,7 +355,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 16
+      "id": "16"
     },
     {
       "userId": 1774865265356,
@@ -385,7 +366,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "returned",
       "purchaseDate": "2026-04-06",
-      "id": 17,
+      "id": "17",
       "returnStatus": "pending",
       "returnDate": "2026-04-06"
     },
@@ -398,7 +379,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "returned",
       "purchaseDate": "2026-04-06",
-      "id": 18,
+      "id": "18",
       "returnStatus": "pending",
       "returnDate": "2026-04-06"
     },
@@ -411,7 +392,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "returned",
       "purchaseDate": "2026-04-06",
-      "id": 19,
+      "id": "19",
       "returnStatus": "pending",
       "returnDate": "2026-04-06"
     },
@@ -424,7 +405,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 20
+      "id": "20"
     },
     {
       "userId": 1774865265356,
@@ -435,7 +416,7 @@
       "place": "Москва, клуб «На чиле»",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 21
+      "id": "21"
     },
     {
       "userId": 1774865265356,
@@ -446,7 +427,7 @@
       "place": "Санкт-Петербург",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 22
+      "id": "22"
     },
     {
       "userId": 1774865265356,
@@ -457,18 +438,231 @@
       "place": "Санкт-Петербург",
       "status": "active",
       "purchaseDate": "2026-04-06",
-      "id": 23
+      "id": "23"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "1",
+      "eventTitle": "Концерт группы «Жженый сахар»",
+      "price": 250,
+      "date": "2026-12-16",
+      "place": "Москва, клуб «На чиле»",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "EM6kHebXcdA",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "1",
+      "eventTitle": "Концерт группы «Жженый сахар»",
+      "price": 250,
+      "date": "2026-12-16",
+      "place": "Москва, клуб «На чиле»",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "9XVFFi0ybPU",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "1",
+      "eventTitle": "Концерт группы «Жженый сахар»",
+      "price": 250,
+      "date": "2026-12-16",
+      "place": "Москва, клуб «На чиле»",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "wODAJ0vPYDs",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "1",
+      "eventTitle": "Концерт группы «Жженый сахар»",
+      "price": 250,
+      "date": "2026-12-16",
+      "place": "Москва, клуб «На чиле»",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "p1uOgJDOL1g",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "1",
+      "eventTitle": "Концерт группы «Жженый сахар»",
+      "price": 250,
+      "date": "2026-12-16",
+      "place": "Москва, клуб «На чиле»",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "8UYmCEd5WZA"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "1",
+      "eventTitle": "Концерт группы «Жженый сахар»",
+      "price": 250,
+      "date": "2026-12-16",
+      "place": "Москва, клуб «На чиле»",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "vKg804Wg45w"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "2",
+      "eventTitle": "Спектакль «Бюро забытых найденных вещей»",
+      "price": 1800,
+      "date": "2026-12-20",
+      "place": "Екатеринбург, Театр драмы",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "ZD_c2doYWDg",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "TDAWLoW5Xqs",
+      "eventTitle": "Мероприятие",
+      "price": 1000,
+      "date": "21.05.2026",
+      "place": "Москва",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "B7m52oJ5MNI",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "TDAWLoW5Xqs",
+      "eventTitle": "Мероприятие",
+      "price": 1000,
+      "date": "21.05.2026",
+      "place": "Москва",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "EkA6Td8b_sg",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "TDAWLoW5Xqs",
+      "eventTitle": "Мероприятие",
+      "price": 1000,
+      "date": "21.05.2026",
+      "place": "Москва",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "5MB1NaoK9jU"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "TDAWLoW5Xqs",
+      "eventTitle": "Мероприятие",
+      "price": 1000,
+      "date": "21.05.2026",
+      "place": "Москва",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "tjF6ZiAxMZA"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "TDAWLoW5Xqs",
+      "eventTitle": "Мероприятие",
+      "price": 1000,
+      "date": "21.05.2026",
+      "place": "Москва",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "0Dj34yeoJm8"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "TDAWLoW5Xqs",
+      "eventTitle": "Мероприятие",
+      "price": 1000,
+      "date": "21.05.2026",
+      "place": "Москва",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "uS9V5EuTiBQ"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "qyQsVMF0nek",
+      "eventTitle": "Концерт концертов",
+      "price": 5000,
+      "date": "2026-05-13",
+      "place": "Москва",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "1h5CFgoFftg"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "qyQsVMF0nek",
+      "eventTitle": "Концерт концертов",
+      "price": 5000,
+      "date": "2026-05-13",
+      "place": "Москва",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "NMCtDw1I5r4"
+    },
+    {
+      "userId": "1774865265347",
+      "eventId": "2",
+      "eventTitle": "Спектакль «Бюро забытых найденных вещей»",
+      "price": 1800,
+      "date": "2026-12-20",
+      "place": "Екатеринбург, Театр драмы",
+      "status": "active",
+      "purchaseDate": "2026-05-11",
+      "id": "6I6HeO7kSeA"
+    },
+    {
+      "userId": "1774865265346",
+      "eventId": "qyQsVMF0nek",
+      "eventTitle": "Концерт Концертов",
+      "price": 5000,
+      "date": "2026-05-13",
+      "place": "Москва",
+      "status": "returned",
+      "purchaseDate": "2026-05-11",
+      "id": "_PDzafIj15w",
+      "returnStatus": "pending",
+      "returnDate": "2026-05-11"
     }
   ],
   "reviews": [
     {
-      "id": 1,
+      "id": "1",
       "eventId": 1,
       "userId": 1,
       "author": "Иван Петров",
       "text": "ЗАЖЖГЛИИИ! Лучший концерт года, группа просто огонь!",
       "rating": 5,
       "date": "2026-03-20"
+    },
+    {
+      "eventId": 3,
+      "userId": "1774865265347",
+      "author": "Таисия",
+      "text": "Под пиво пойдет",
+      "rating": 3,
+      "date": "2026-05-11",
+      "id": "48oDdgcTrG4"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
